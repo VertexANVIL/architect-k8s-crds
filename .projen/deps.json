@@ -1,7 +1,11 @@
 {
   "dependencies": [
     {
-      "name": "@types/jest",
+      "name": "@kubernetes-models/crd-generate",
+      "type": "build"
+    },
+    {
+      "name": "@kubernetes-models/openapi-generate",
       "type": "build"
     },
     {
@@ -37,15 +41,6 @@
       "type": "build"
     },
     {
-      "name": "jest",
-      "type": "build"
-    },
-    {
-      "name": "jest-junit",
-      "version": "^13",
-      "type": "build"
-    },
-    {
       "name": "json-schema",
       "type": "build"
     },
@@ -61,10 +56,6 @@
     {
       "name": "standard-version",
       "version": "^9",
-      "type": "build"
-    },
-    {
-      "name": "ts-jest",
       "type": "build"
     },
     {

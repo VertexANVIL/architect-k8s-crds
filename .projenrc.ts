@@ -1,12 +1,32 @@
 import { typescript } from 'projen';
+
 const project = new typescript.TypeScriptProject({
+  authorName: 'Arctarus Limited',
+  authorOrganization: true,
+  authorEmail: 'info@arctarus.co.uk',
+  authorUrl: 'https://www.arctarus.co.uk',
+
   defaultReleaseBranch: 'main',
-  name: 'architect-k8s-crds',
+  name: '@akim/architect-k8s-crds',
+  license: 'MIT',
+  repository: 'https://github.com/ArctarusLimited/architect-k8s-crds.git',
+
   projenrcTs: true,
 
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  // dependencies
+  deps: [],
+
+  devDeps: [
+    '@types/node',
+    '@kubernetes-models/crd-generate',
+    '@kubernetes-models/openapi-generate',
+  ],
+
+  // add to gitignore
+  gitignore: [".venv"],
+
+  // tests are not required
+  jest: false,
 });
+
 project.synth();
