@@ -14,7 +14,12 @@ const project = new typescript.TypeScriptProject({
   projenrcTs: true,
 
   // dependencies
-  deps: [],
+  deps: [
+    'kubernetes-models',
+    '@kubernetes-models/apimachinery',
+    '@kubernetes-models/base',
+    '@kubernetes-models/validate',
+  ],
 
   devDeps: [
     '@types/node',
@@ -23,7 +28,7 @@ const project = new typescript.TypeScriptProject({
   ],
 
   // add to gitignore
-  gitignore: [".venv"],
+  gitignore: ['.venv'],
 
   // tests are not required
   jest: false,

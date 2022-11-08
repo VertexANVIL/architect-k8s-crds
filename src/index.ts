@@ -42,3 +42,4 @@ import * as externalSecretsIo from "./external-secrets.io";
 export { externalSecretsIo };
 import * as metalSideroDev from "./metal.sidero.dev";
 export { metalSideroDev };
+export const dir = __dirname;

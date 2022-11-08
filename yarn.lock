@@ -97,6 +97,24 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@kubernetes-models/apimachinery@*", "@kubernetes-models/apimachinery@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@kubernetes-models/apimachinery/-/apimachinery-1.1.0.tgz#3e80e038b43a1dfd73e2bc46a9c55a8f268649cc"
+  integrity sha512-DvCNeou3+M5ESJluVs8daVp7g03/hWnwXHou9Se8qNRZpqH6lQHvRjXy6HWSqBV9fKZOnWcOExmkUPQGbVIa6A==
+  dependencies:
+    "@kubernetes-models/base" "^4.0.0"
+    "@kubernetes-models/validate" "^3.0.0"
+    tslib "^2.4.0"
+
+"@kubernetes-models/base@*", "@kubernetes-models/base@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@kubernetes-models/base/-/base-4.0.0.tgz#2eed5b5fae1e67887528ce02497a59035e811b20"
+  integrity sha512-wOQuIJk04urKwvOH2ybja8GeRNDljrq+f3yxWCdFPpsQ94UgxzWk0c3UeE5Tq+VX0hm1mNLaJZG6Upj+uIutjQ==
+  dependencies:
+    "@kubernetes-models/validate" "^3.0.0"
+    is-plain-object "^5.0.0"
+    tslib "^2.4.0"
+
 "@kubernetes-models/crd-generate@*":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@kubernetes-models/crd-generate/-/crd-generate-4.0.1.tgz#eb931cdaaf90c7470665a06898732e20beba63de"
@@ -152,6 +170,15 @@
   resolved "https://registry.yarnpkg.com/@kubernetes-models/string-util/-/string-util-3.0.0.tgz#56fe6697f7a42a1470d5d6d67e0dd1ce7c6cc590"
   integrity sha512-fkTn7PB1VSNOZYM7oosd0GwfYplhFxISsHkyQyLAbiFuM/HA2xxbGHjfm3779RCCgE7SOx0O4rKdQ2EpABCaxQ==
   dependencies:
+    tslib "^2.4.0"
+
+"@kubernetes-models/validate@*", "@kubernetes-models/validate@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@kubernetes-models/validate/-/validate-3.0.0.tgz#1f502e3438e9c5ea8cd090ed21768fb1e47650a1"
+  integrity sha512-XQhuCn6KpZ2poeQWcN6C5bQYXXazEHcOLMEsQ35Cg5SN+nm9caDfI6MHCCCRSgoTW7jvP6UiWAG0kfEO86Z2xw==
+  dependencies:
+    ajv "^8.11.0"
+    ajv-formats "^2.1.1"
     tslib "^2.4.0"
 
 "@nodelib/fs.scandir@2.1.5":
@@ -517,6 +544,13 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
+ajv-formats@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/ajv-formats/-/ajv-formats-2.1.1.tgz#6e669400659eb74973bbf2e33327180a0996b520"
+  integrity sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==
+  dependencies:
+    ajv "^8.0.0"
+
 ajv@^6.10.0, ajv@^6.12.4:
   version "6.12.6"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
@@ -527,7 +561,7 @@ ajv@^6.10.0, ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^8.11.0:
+ajv@^8.0.0, ajv@^8.11.0:
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.11.0.tgz#977e91dd96ca669f54a11e23e378e33b884a565f"
   integrity sha512-wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==
@@ -2289,6 +2323,11 @@ is-plain-obj@^1.1.0:
   resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
   integrity sha512-yvkRyxmFKEOQ4pNXCmJG5AEQNlXJS5LaONXo5/cLdTZdWvsZ1ioJEonLGAosKlMWE8lwUy/bJzMjcw8az73+Fg==
 
+is-plain-object@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-5.0.0.tgz#4427f50ab3429e9025ea7d52e9043a9ef4159344"
+  integrity sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==
+
 is-regex@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.1.4.tgz#eef5663cd59fa4c0ae339505323df6854bb15958"
@@ -2488,6 +2527,16 @@ kleur@^4.0.1:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.5.tgz#95106101795f7050c6c650f350c683febddb1780"
   integrity sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==
+
+kubernetes-models@*:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/kubernetes-models/-/kubernetes-models-4.1.0.tgz#692c8172e5f8d4ecaa63d68c0fd39136f89c1855"
+  integrity sha512-OlT0qgHj0W7hJQdc0HzbdYUpK3LcMaKg43yqeEsUsq1gCAldfzEaMyhifNylMud3dWglPQ+5Jt6sFyIr3XTdvg==
+  dependencies:
+    "@kubernetes-models/apimachinery" "^1.1.0"
+    "@kubernetes-models/base" "^4.0.0"
+    "@kubernetes-models/validate" "^3.0.0"
+    tslib "^2.4.0"
 
 latest-version@^7.0.0:
   version "7.0.0"

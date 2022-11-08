@@ -98,3 +98,6 @@ with tempfile.NamedTemporaryFile(mode="w") as f:
     # now run the build
     params = ["npx", "crd-generate", "--input", f.name, "--output", generated_path]
     subprocess.run(params, stdout=subprocess.DEVNULL)
+
+with open("src/index.ts", "a") as f:
+    f.write("export const dir = __dirname;\n")
