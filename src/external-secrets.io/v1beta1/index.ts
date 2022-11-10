@@ -1,4 +1,4 @@
-export * from "./ClusterSecretStore";
 export * from "./ClusterExternalSecret";
-export * from "./ExternalSecret";
 export * from "./SecretStore";
+export * from "./ClusterSecretStore";
+export * from "./ExternalSecret";

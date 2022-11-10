@@ -1,2 +1,2 @@
-export * from "./ClusterReportChangeRequest";
 export * from "./ReportChangeRequest";
+export * from "./ClusterReportChangeRequest";

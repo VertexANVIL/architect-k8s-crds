@@ -1,3 +1,3 @@
 export * from "./ImageRepository";
-export * from "./ImageUpdateAutomation";
 export * from "./ImagePolicy";
+export * from "./ImageUpdateAutomation";

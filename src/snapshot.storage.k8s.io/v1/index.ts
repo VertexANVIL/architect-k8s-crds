@@ -1,3 +1,3 @@
-export * from "./VolumeSnapshotContent";
-export * from "./VolumeSnapshotClass";
 export * from "./VolumeSnapshot";
+export * from "./VolumeSnapshotClass";
+export * from "./VolumeSnapshotContent";
