@@ -30,6 +30,8 @@ import * as snapshotStorageK8sIo from "./snapshot.storage.k8s.io";
 export { snapshotStorageK8sIo };
 import * as externaldnsK8sIo from "./externaldns.k8s.io";
 export { externaldnsK8sIo };
+import * as postgresOperatorCrunchydataCom from "./postgres-operator.crunchydata.com";
+export { postgresOperatorCrunchydataCom };
 import * as k8sCniCncfIo from "./k8s.cni.cncf.io";
 export { k8sCniCncfIo };
 import * as externalSecretsIo from "./external-secrets.io";
