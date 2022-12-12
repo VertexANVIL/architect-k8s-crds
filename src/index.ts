@@ -2,6 +2,8 @@ import * as jsonnetIo from "./jsonnet.io";
 export { jsonnetIo };
 import * as bitnamiCom from "./bitnami.com";
 export { bitnamiCom };
+import * as minioMinIo from "./minio.min.io";
+export { minioMinIo };
 import * as ciliumIo from "./cilium.io";
 export { ciliumIo };
 import * as networkingIstioIo from "./networking.istio.io";
