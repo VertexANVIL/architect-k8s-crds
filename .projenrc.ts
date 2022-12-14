@@ -7,7 +7,7 @@ const project = new typescript.TypeScriptProject({
   authorUrl: 'https://www.arctarus.co.uk',
 
   defaultReleaseBranch: 'main',
-  name: '@akim/architect-k8s-crds',
+  name: '@arctarus/architect-k8s-crds',
   license: 'MIT',
   repository: 'https://github.com/ArctarusLimited/architect-k8s-crds.git',
 

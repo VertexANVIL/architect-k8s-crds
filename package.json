@@ -1,5 +1,5 @@
 {
-  "name": "@akim/architect-k8s-crds",
+  "name": "@arctarus/architect-k8s-crds",
   "repository": {
     "type": "git",
     "url": "https://github.com/ArctarusLimited/architect-k8s-crds.git"
