@@ -1,4 +1,5 @@
 import { typescript } from 'projen';
+import { NpmAccess } from 'projen/lib/javascript';
 
 const project = new typescript.TypeScriptProject({
   authorName: 'Arctarus Limited',
@@ -12,6 +13,8 @@ const project = new typescript.TypeScriptProject({
   repository: 'https://github.com/ArctarusLimited/architect-k8s-crds.git',
 
   projenrcTs: true,
+  releaseToNpm: true,
+  npmAccess: NpmAccess.PUBLIC,
 
   // dependencies
   deps: [
@@ -32,6 +35,9 @@ const project = new typescript.TypeScriptProject({
 
   // tests are not required
   jest: false,
+
+  // do not eslint as generated code is not conformant
+  eslint: false,
 });
 
 project.synth();
