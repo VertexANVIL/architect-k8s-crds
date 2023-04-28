@@ -144,7 +144,7 @@ export interface IPrometheusRule {
         "annotations"?: {
           [key: string]: string;
         };
-        "expr": any;
+        "expr": number | string;
         "for"?: string;
         "labels"?: {
           [key: string]: string;

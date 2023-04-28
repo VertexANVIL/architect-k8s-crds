@@ -924,8 +924,8 @@ const schema = {
                       "nullable": true
                     },
                     "repoName": {
-                      "pattern": "^repo[1-4]",
-                      "type": "string"
+                      "type": "string",
+                      "pattern": "^repo[1-4]"
                     }
                   },
                   "required": [
@@ -1808,8 +1808,8 @@ const schema = {
                         "nullable": true
                       },
                       "name": {
-                        "pattern": "^repo[1-4]",
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "^repo[1-4]"
                       },
                       "s3": {
                         "properties": {
@@ -2647,8 +2647,8 @@ const schema = {
                       "nullable": true
                     },
                     "repoName": {
-                      "pattern": "^repo[1-4]",
-                      "type": "string"
+                      "type": "string",
+                      "pattern": "^repo[1-4]"
                     },
                     "resources": {
                       "properties": {
@@ -3929,8 +3929,8 @@ const schema = {
                       "nullable": true
                     },
                     "name": {
-                      "pattern": "^repo[1-4]",
-                      "type": "string"
+                      "type": "string",
+                      "pattern": "^repo[1-4]"
                     },
                     "s3": {
                       "properties": {
@@ -4833,8 +4833,8 @@ const schema = {
                   "nullable": true
                 },
                 "repoName": {
-                  "pattern": "^repo[1-4]",
-                  "type": "string"
+                  "type": "string",
+                  "pattern": "^repo[1-4]"
                 },
                 "resources": {
                   "properties": {
@@ -6876,8 +6876,8 @@ const schema = {
               },
               "name": {
                 "default": "",
-                "pattern": "^([a-z0-9]([-a-z0-9]*[a-z0-9])?)?$",
                 "type": "string",
+                "pattern": "^([a-z0-9]([-a-z0-9]*[a-z0-9])?)?$",
                 "nullable": true
               },
               "priorityClassName": {
@@ -9908,8 +9908,8 @@ const schema = {
               "nullable": true
             },
             "repoName": {
-              "pattern": "^repo[1-4]",
               "type": "string",
+              "pattern": "^repo[1-4]",
               "nullable": true
             }
           },
@@ -11132,12 +11132,12 @@ const schema = {
               "name": {
                 "maxLength": 63,
                 "minLength": 1,
-                "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$",
-                "type": "string"
+                "type": "string",
+                "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$"
               },
               "options": {
-                "pattern": "^[^;]*$",
                 "type": "string",
+                "pattern": "^[^;]*$",
                 "nullable": true
               },
               "password": {
@@ -11197,8 +11197,8 @@ const schema = {
               "reason": {
                 "maxLength": 1024,
                 "minLength": 1,
-                "pattern": "^[A-Za-z]([A-Za-z0-9_,:]*[A-Za-z0-9_])?$",
-                "type": "string"
+                "type": "string",
+                "pattern": "^[A-Za-z]([A-Za-z0-9_,:]*[A-Za-z0-9_])?$"
               },
               "status": {
                 "enum": [
@@ -11210,8 +11210,8 @@ const schema = {
               },
               "type": {
                 "maxLength": 316,
-                "pattern": "^([a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*/)?(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])$",
-                "type": "string"
+                "type": "string",
+                "pattern": "^([a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*\\/)?(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])$"
               }
             },
             "required": [
@@ -11654,7 +11654,7 @@ export interface IPostgresCluster {
                 /**
                  * Specifies the output format of the exposed resources, defaults to "1"
                  */
-                "divisor"?: any;
+                "divisor"?: number | string;
                 /**
                  * Required: resource to select
                  */
@@ -12142,13 +12142,13 @@ export interface IPostgresCluster {
              * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             /**
              * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
           /**
@@ -12627,13 +12627,13 @@ export interface IPostgresCluster {
              * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             /**
              * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
           /**
@@ -12887,13 +12887,13 @@ export interface IPostgresCluster {
                  * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                  */
                 "limits"?: {
-                  [key: string]: any;
+                  [key: string]: number | string;
                 };
                 /**
                  * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                  */
                 "requests": {
-                  [key: string]: any;
+                  [key: string]: number | string;
                 };
               };
               /**
@@ -13381,13 +13381,13 @@ export interface IPostgresCluster {
              * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             /**
              * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
           /**
@@ -13432,13 +13432,13 @@ export interface IPostgresCluster {
                * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "limits"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
               /**
                * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "requests"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
             };
           };
@@ -13454,13 +13454,13 @@ export interface IPostgresCluster {
                * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "limits"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
               /**
                * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "requests"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
             };
           };
@@ -13539,7 +13539,7 @@ export interface IPostgresCluster {
               /**
                * Specifies the output format of the exposed resources, defaults to "1"
                */
-              "divisor"?: any;
+              "divisor"?: number | string;
               /**
                * Required: resource to select
                */
@@ -14144,7 +14144,7 @@ export interface IPostgresCluster {
                 /**
                  * Specifies the output format of the exposed resources, defaults to "1"
                  */
-                "divisor"?: any;
+                "divisor"?: number | string;
                 /**
                  * Required: resource to select
                  */
@@ -14328,13 +14328,13 @@ export interface IPostgresCluster {
                  * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                  */
                 "limits"?: {
-                  [key: string]: any;
+                  [key: string]: number | string;
                 };
                 /**
                  * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                  */
                 "requests"?: {
-                  [key: string]: any;
+                  [key: string]: number | string;
                 };
               };
               /**
@@ -14388,13 +14388,13 @@ export interface IPostgresCluster {
            * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "limits"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           /**
            * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "requests"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
         };
         /**
@@ -14865,13 +14865,13 @@ export interface IPostgresCluster {
            * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "limits"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           /**
            * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "requests"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
         };
         /**
@@ -15458,7 +15458,7 @@ export interface IPostgresCluster {
               /**
                * Specifies the output format of the exposed resources, defaults to "1"
                */
-              "divisor"?: any;
+              "divisor"?: number | string;
               /**
                * Required: resource to select
                */
@@ -15571,7 +15571,7 @@ export interface IPostgresCluster {
               /**
                * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
               /**
                * Scheme to use for connecting to the host. Defaults to HTTP.
                */
@@ -15588,7 +15588,7 @@ export interface IPostgresCluster {
               /**
                * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
             };
           };
           /**
@@ -15632,7 +15632,7 @@ export interface IPostgresCluster {
               /**
                * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
               /**
                * Scheme to use for connecting to the host. Defaults to HTTP.
                */
@@ -15649,7 +15649,7 @@ export interface IPostgresCluster {
               /**
                * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
             };
           };
         };
@@ -15712,7 +15712,7 @@ export interface IPostgresCluster {
             /**
              * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
             /**
              * Scheme to use for connecting to the host. Defaults to HTTP.
              */
@@ -15741,7 +15741,7 @@ export interface IPostgresCluster {
             /**
              * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
           };
           /**
            * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -15840,7 +15840,7 @@ export interface IPostgresCluster {
             /**
              * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
             /**
              * Scheme to use for connecting to the host. Defaults to HTTP.
              */
@@ -15869,7 +15869,7 @@ export interface IPostgresCluster {
             /**
              * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
           };
           /**
            * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -15888,13 +15888,13 @@ export interface IPostgresCluster {
            * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "limits"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           /**
            * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "requests"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
         };
         /**
@@ -16057,7 +16057,7 @@ export interface IPostgresCluster {
             /**
              * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
             /**
              * Scheme to use for connecting to the host. Defaults to HTTP.
              */
@@ -16086,7 +16086,7 @@ export interface IPostgresCluster {
             /**
              * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
           };
           /**
            * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -16214,13 +16214,13 @@ export interface IPostgresCluster {
            * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "limits"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           /**
            * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "requests": {
-            [key: string]: any;
+            [key: string]: number | string;
           };
         };
         /**
@@ -16278,7 +16278,7 @@ export interface IPostgresCluster {
       /**
        * Minimum number of pods that should be available at a time. Defaults to one when the replicas field is greater than one.
        */
-      "minAvailable"?: any;
+      "minAvailable"?: number | string;
       /**
        * Name that associates this set of PostgreSQL pods. This field is optional when only one instance set is defined. Each instance set in a cluster must have a unique name. The combined length of this and the cluster name must be 46 characters or less.
        */
@@ -16299,13 +16299,13 @@ export interface IPostgresCluster {
          * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
          */
         "limits"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
         /**
          * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
          */
         "requests"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
       };
       /**
@@ -16324,13 +16324,13 @@ export interface IPostgresCluster {
              * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             /**
              * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
         };
@@ -16461,13 +16461,13 @@ export interface IPostgresCluster {
            * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "limits"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           /**
            * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "requests": {
-            [key: string]: any;
+            [key: string]: number | string;
           };
         };
         /**
@@ -16606,7 +16606,7 @@ export interface IPostgresCluster {
                   /**
                    * Specifies the output format of the exposed resources, defaults to "1"
                    */
-                  "divisor"?: any;
+                  "divisor"?: number | string;
                   /**
                    * Required: resource to select
                    */
@@ -16704,13 +16704,13 @@ export interface IPostgresCluster {
              * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             /**
              * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
         };
@@ -17270,7 +17270,7 @@ export interface IPostgresCluster {
                   /**
                    * Specifies the output format of the exposed resources, defaults to "1"
                    */
-                  "divisor"?: any;
+                  "divisor"?: number | string;
                   /**
                    * Required: resource to select
                    */
@@ -17408,7 +17408,7 @@ export interface IPostgresCluster {
                 /**
                  * Specifies the output format of the exposed resources, defaults to "1"
                  */
-                "divisor"?: any;
+                "divisor"?: number | string;
                 /**
                  * Required: resource to select
                  */
@@ -17521,7 +17521,7 @@ export interface IPostgresCluster {
                 /**
                  * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                  */
-                "port": any;
+                "port": number | string;
                 /**
                  * Scheme to use for connecting to the host. Defaults to HTTP.
                  */
@@ -17538,7 +17538,7 @@ export interface IPostgresCluster {
                 /**
                  * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                  */
-                "port": any;
+                "port": number | string;
               };
             };
             /**
@@ -17582,7 +17582,7 @@ export interface IPostgresCluster {
                 /**
                  * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                  */
-                "port": any;
+                "port": number | string;
                 /**
                  * Scheme to use for connecting to the host. Defaults to HTTP.
                  */
@@ -17599,7 +17599,7 @@ export interface IPostgresCluster {
                 /**
                  * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                  */
-                "port": any;
+                "port": number | string;
               };
             };
           };
@@ -17662,7 +17662,7 @@ export interface IPostgresCluster {
               /**
                * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
               /**
                * Scheme to use for connecting to the host. Defaults to HTTP.
                */
@@ -17691,7 +17691,7 @@ export interface IPostgresCluster {
               /**
                * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
             };
             /**
              * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -17790,7 +17790,7 @@ export interface IPostgresCluster {
               /**
                * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
               /**
                * Scheme to use for connecting to the host. Defaults to HTTP.
                */
@@ -17819,7 +17819,7 @@ export interface IPostgresCluster {
               /**
                * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
             };
             /**
              * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -17838,13 +17838,13 @@ export interface IPostgresCluster {
              * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             /**
              * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
           /**
@@ -18007,7 +18007,7 @@ export interface IPostgresCluster {
               /**
                * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
               /**
                * Scheme to use for connecting to the host. Defaults to HTTP.
                */
@@ -18036,7 +18036,7 @@ export interface IPostgresCluster {
               /**
                * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
                */
-              "port": any;
+              "port": number | string;
             };
             /**
              * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -18162,7 +18162,7 @@ export interface IPostgresCluster {
         /**
          * Minimum number of pods that should be available at a time. Defaults to one when the replicas field is greater than one.
          */
-        "minAvailable"?: any;
+        "minAvailable"?: number | string;
         /**
          * Port on which PgBouncer should listen for client connections. Changing this value causes PgBouncer to restart.
          */
@@ -18183,13 +18183,13 @@ export interface IPostgresCluster {
            * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "limits"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           /**
            * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "requests"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
         };
         /**
@@ -18232,13 +18232,13 @@ export interface IPostgresCluster {
                * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "limits"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
               /**
                * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "requests"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
             };
           };
@@ -18866,7 +18866,7 @@ export interface IPostgresCluster {
                   /**
                    * Specifies the output format of the exposed resources, defaults to "1"
                    */
-                  "divisor"?: any;
+                  "divisor"?: number | string;
                   /**
                    * Required: resource to select
                    */
@@ -18995,13 +18995,13 @@ export interface IPostgresCluster {
              * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             /**
              * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
           /**
@@ -19076,13 +19076,13 @@ export interface IPostgresCluster {
            * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "limits"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           /**
            * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
            */
           "requests"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
         };
         /**

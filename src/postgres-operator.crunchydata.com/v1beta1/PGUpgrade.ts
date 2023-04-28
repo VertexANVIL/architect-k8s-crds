@@ -801,8 +801,8 @@ const schema = {
               "reason": {
                 "maxLength": 1024,
                 "minLength": 1,
-                "pattern": "^[A-Za-z]([A-Za-z0-9_,:]*[A-Za-z0-9_])?$",
-                "type": "string"
+                "type": "string",
+                "pattern": "^[A-Za-z]([A-Za-z0-9_,:]*[A-Za-z0-9_])?$"
               },
               "status": {
                 "enum": [
@@ -814,8 +814,8 @@ const schema = {
               },
               "type": {
                 "maxLength": 316,
-                "pattern": "^([a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*/)?(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])$",
-                "type": "string"
+                "type": "string",
+                "pattern": "^([a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*\\/)?(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])$"
               }
             },
             "required": [
@@ -1318,13 +1318,13 @@ export interface IPGUpgrade {
        * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
        */
       "limits"?: {
-        [key: string]: any;
+        [key: string]: number | string;
       };
       /**
        * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
        */
       "requests"?: {
-        [key: string]: any;
+        [key: string]: number | string;
       };
     };
     /**

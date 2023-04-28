@@ -148,7 +148,6 @@ const schema = {
                     },
                     "months": {
                       "items": {
-                        "pattern": "^((?i)january|february|march|april|may|june|july|august|september|october|november|december|[1-12])(?:((:((?i)january|february|march|april|may|june|july|august|september|october|november|december|[1-12]))$)|$)",
                         "type": "string"
                       },
                       "type": "array",
@@ -158,13 +157,13 @@ const schema = {
                       "items": {
                         "properties": {
                           "endTime": {
-                            "pattern": "^((([01][0-9])|(2[0-3])):[0-5][0-9])$|(^24:00$)",
                             "type": "string",
+                            "pattern": "^((([01][0-9])|(2[0-3])):[0-5][0-9])$|(^24:00$)",
                             "nullable": true
                           },
                           "startTime": {
-                            "pattern": "^((([01][0-9])|(2[0-3])):[0-5][0-9])$|(^24:00$)",
                             "type": "string",
+                            "pattern": "^((([01][0-9])|(2[0-3])):[0-5][0-9])$|(^24:00$)",
                             "nullable": true
                           }
                         },
@@ -175,7 +174,6 @@ const schema = {
                     },
                     "weekdays": {
                       "items": {
-                        "pattern": "^((?i)sun|mon|tues|wednes|thurs|fri|satur)day(?:((:(sun|mon|tues|wednes|thurs|fri|satur)day)$)|$)",
                         "type": "string"
                       },
                       "type": "array",
@@ -183,8 +181,8 @@ const schema = {
                     },
                     "years": {
                       "items": {
-                        "pattern": "^2\\d{3}(?::2\\d{3}|$)",
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "^2\\d{3}(?::2\\d{3}|$)"
                       },
                       "type": "array",
                       "nullable": true
@@ -1370,8 +1368,8 @@ const schema = {
                 "items": {
                   "properties": {
                     "expire": {
-                      "pattern": "^(([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?$",
                       "type": "string",
+                      "pattern": "^(([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?$",
                       "nullable": true
                     },
                     "html": {
@@ -1717,8 +1715,8 @@ const schema = {
                       "nullable": true
                     },
                     "retry": {
-                      "pattern": "^(([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?$",
                       "type": "string",
+                      "pattern": "^(([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?$",
                       "nullable": true
                     },
                     "sendResolved": {

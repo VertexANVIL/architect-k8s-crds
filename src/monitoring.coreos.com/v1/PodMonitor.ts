@@ -189,8 +189,8 @@ const schema = {
                 "nullable": true
               },
               "interval": {
-                "pattern": "^(0|(([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?)$",
                 "type": "string",
+                "pattern": "^(0|(([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?)$",
                 "nullable": true
               },
               "metricRelabelings": {
@@ -229,8 +229,8 @@ const schema = {
                     },
                     "sourceLabels": {
                       "items": {
-                        "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$",
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
                       },
                       "type": "array",
                       "nullable": true
@@ -398,8 +398,8 @@ const schema = {
                     },
                     "sourceLabels": {
                       "items": {
-                        "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$",
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
                       },
                       "type": "array",
                       "nullable": true
@@ -419,8 +419,8 @@ const schema = {
                 "nullable": true
               },
               "scrapeTimeout": {
-                "pattern": "^(0|(([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?)$",
                 "type": "string",
+                "pattern": "^(0|(([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?)$",
                 "nullable": true
               },
               "targetPort": {
@@ -969,7 +969,7 @@ export interface IPodMonitor {
       /**
        * Deprecated: Use 'port' instead.
        */
-      "targetPort"?: any;
+      "targetPort"?: number | string;
       /**
        * TLS configuration to use when scraping the endpoint.
        */

@@ -8967,7 +8967,7 @@ export interface ITenant {
         };
         "resourceFieldRef"?: {
           "containerName"?: string;
-          "divisor"?: any;
+          "divisor"?: number | string;
           "resource": string;
         };
         "secretKeyRef"?: {
@@ -9164,7 +9164,7 @@ export interface ITenant {
           };
           "resourceFieldRef"?: {
             "containerName"?: string;
-            "divisor"?: any;
+            "divisor"?: number | string;
             "resource": string;
           };
           "secretKeyRef"?: {
@@ -9193,10 +9193,10 @@ export interface ITenant {
       "replicas"?: number;
       "resources"?: {
         "limits"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
         "requests"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
       };
       "securityContext"?: {
@@ -9559,7 +9559,7 @@ export interface ITenant {
             };
             "resourceFieldRef"?: {
               "containerName"?: string;
-              "divisor"?: any;
+              "divisor"?: number | string;
               "resource": string;
             };
             "secretKeyRef"?: {
@@ -9579,10 +9579,10 @@ export interface ITenant {
         };
         "resources"?: {
           "limits"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           "requests"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
         };
         "securityContext"?: {
@@ -9668,10 +9668,10 @@ export interface ITenant {
             };
             "resources"?: {
               "limits"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
               "requests"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
             };
             "selector"?: {
@@ -9691,10 +9691,10 @@ export interface ITenant {
           "status"?: {
             "accessModes"?: Array<string>;
             "allocatedResources"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             "capacity"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             "conditions"?: Array<{
               "lastProbeTime"?: string;
@@ -9724,7 +9724,7 @@ export interface ITenant {
           };
           "resourceFieldRef"?: {
             "containerName"?: string;
-            "divisor"?: any;
+            "divisor"?: number | string;
             "resource": string;
           };
           "secretKeyRef"?: {
@@ -9743,10 +9743,10 @@ export interface ITenant {
       };
       "resources"?: {
         "limits"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
         "requests"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
       };
       "securityContext"?: {
@@ -9967,7 +9967,7 @@ export interface ITenant {
           };
           "resourceFieldRef"?: {
             "containerName"?: string;
-            "divisor"?: any;
+            "divisor"?: number | string;
             "resource": string;
           };
           "secretKeyRef"?: {
@@ -9987,10 +9987,10 @@ export interface ITenant {
       };
       "resources"?: {
         "limits"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
         "requests"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
       };
       "securityContext"?: {
@@ -10103,7 +10103,7 @@ export interface ITenant {
             };
             "resourceFieldRef"?: {
               "containerName"?: string;
-              "divisor"?: any;
+              "divisor"?: number | string;
               "resource": string;
             };
             "secretKeyRef"?: {
@@ -10138,12 +10138,12 @@ export interface ITenant {
                 "value": string;
               }>;
               "path"?: string;
-              "port": any;
+              "port": number | string;
               "scheme"?: string;
             };
             "tcpSocket"?: {
               "host"?: string;
-              "port": any;
+              "port": number | string;
             };
           };
           "preStop"?: {
@@ -10157,12 +10157,12 @@ export interface ITenant {
                 "value": string;
               }>;
               "path"?: string;
-              "port": any;
+              "port": number | string;
               "scheme"?: string;
             };
             "tcpSocket"?: {
               "host"?: string;
-              "port": any;
+              "port": number | string;
             };
           };
         };
@@ -10182,7 +10182,7 @@ export interface ITenant {
               "value": string;
             }>;
             "path"?: string;
-            "port": any;
+            "port": number | string;
             "scheme"?: string;
           };
           "initialDelaySeconds"?: number;
@@ -10190,7 +10190,7 @@ export interface ITenant {
           "successThreshold"?: number;
           "tcpSocket"?: {
             "host"?: string;
-            "port": any;
+            "port": number | string;
           };
           "terminationGracePeriodSeconds"?: number;
           "timeoutSeconds"?: number;
@@ -10219,7 +10219,7 @@ export interface ITenant {
               "value": string;
             }>;
             "path"?: string;
-            "port": any;
+            "port": number | string;
             "scheme"?: string;
           };
           "initialDelaySeconds"?: number;
@@ -10227,17 +10227,17 @@ export interface ITenant {
           "successThreshold"?: number;
           "tcpSocket"?: {
             "host"?: string;
-            "port": any;
+            "port": number | string;
           };
           "terminationGracePeriodSeconds"?: number;
           "timeoutSeconds"?: number;
         };
         "resources"?: {
           "limits"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           "requests"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
         };
         "securityContext"?: {
@@ -10285,7 +10285,7 @@ export interface ITenant {
               "value": string;
             }>;
             "path"?: string;
-            "port": any;
+            "port": number | string;
             "scheme"?: string;
           };
           "initialDelaySeconds"?: number;
@@ -10293,7 +10293,7 @@ export interface ITenant {
           "successThreshold"?: number;
           "tcpSocket"?: {
             "host"?: string;
-            "port": any;
+            "port": number | string;
           };
           "terminationGracePeriodSeconds"?: number;
           "timeoutSeconds"?: number;
@@ -10345,10 +10345,10 @@ export interface ITenant {
           };
           "resources"?: {
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
           "selector"?: {
@@ -10368,10 +10368,10 @@ export interface ITenant {
         "status"?: {
           "accessModes"?: Array<string>;
           "allocatedResources"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           "capacity"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           "conditions"?: Array<{
             "lastProbeTime"?: string;
@@ -10455,14 +10455,14 @@ export interface ITenant {
             "path": string;
             "resourceFieldRef"?: {
               "containerName"?: string;
-              "divisor"?: any;
+              "divisor"?: number | string;
               "resource": string;
             };
           }>;
         };
         "emptyDir"?: {
           "medium"?: string;
-          "sizeLimit"?: any;
+          "sizeLimit"?: number | string;
         };
         "ephemeral"?: {
           "volumeClaimTemplate"?: {
@@ -10491,10 +10491,10 @@ export interface ITenant {
               };
               "resources"?: {
                 "limits"?: {
-                  [key: string]: any;
+                  [key: string]: number | string;
                 };
                 "requests"?: {
-                  [key: string]: any;
+                  [key: string]: number | string;
                 };
               };
               "selector"?: {
@@ -10611,7 +10611,7 @@ export interface ITenant {
                 "path": string;
                 "resourceFieldRef"?: {
                   "containerName"?: string;
-                  "divisor"?: any;
+                  "divisor"?: number | string;
                   "resource": string;
                 };
               }>;
@@ -10849,10 +10849,10 @@ export interface ITenant {
       };
       "resources"?: {
         "limits"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
         "requests"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
       };
       "securityContext"?: {
@@ -10938,10 +10938,10 @@ export interface ITenant {
           };
           "resources"?: {
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
           "selector"?: {
@@ -10961,10 +10961,10 @@ export interface ITenant {
         "status"?: {
           "accessModes"?: Array<string>;
           "allocatedResources"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           "capacity"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           "conditions"?: Array<{
             "lastProbeTime"?: string;

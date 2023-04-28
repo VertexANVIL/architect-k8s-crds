@@ -5683,7 +5683,7 @@ export interface IAlertmanager {
             /**
              * Specifies the output format of the exposed resources, defaults to "1"
              */
-            "divisor"?: any;
+            "divisor"?: number | string;
             /**
              * Required: resource to select
              */
@@ -5796,7 +5796,7 @@ export interface IAlertmanager {
             /**
              * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
             /**
              * Scheme to use for connecting to the host. Defaults to HTTP.
              */
@@ -5813,7 +5813,7 @@ export interface IAlertmanager {
             /**
              * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
           };
         };
         /**
@@ -5857,7 +5857,7 @@ export interface IAlertmanager {
             /**
              * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
             /**
              * Scheme to use for connecting to the host. Defaults to HTTP.
              */
@@ -5874,7 +5874,7 @@ export interface IAlertmanager {
             /**
              * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
           };
         };
       };
@@ -5937,7 +5937,7 @@ export interface IAlertmanager {
           /**
            * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
           /**
            * Scheme to use for connecting to the host. Defaults to HTTP.
            */
@@ -5966,7 +5966,7 @@ export interface IAlertmanager {
           /**
            * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
         };
         /**
          * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -6065,7 +6065,7 @@ export interface IAlertmanager {
           /**
            * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
           /**
            * Scheme to use for connecting to the host. Defaults to HTTP.
            */
@@ -6094,7 +6094,7 @@ export interface IAlertmanager {
           /**
            * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
         };
         /**
          * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -6113,13 +6113,13 @@ export interface IAlertmanager {
          * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
          */
         "limits"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
         /**
          * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
          */
         "requests"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
       };
       /**
@@ -6283,7 +6283,7 @@ export interface IAlertmanager {
           /**
            * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
           /**
            * Scheme to use for connecting to the host. Defaults to HTTP.
            */
@@ -6312,7 +6312,7 @@ export interface IAlertmanager {
           /**
            * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
         };
         /**
          * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -6493,7 +6493,7 @@ export interface IAlertmanager {
             /**
              * Specifies the output format of the exposed resources, defaults to "1"
              */
-            "divisor"?: any;
+            "divisor"?: number | string;
             /**
              * Required: resource to select
              */
@@ -6606,7 +6606,7 @@ export interface IAlertmanager {
             /**
              * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
             /**
              * Scheme to use for connecting to the host. Defaults to HTTP.
              */
@@ -6623,7 +6623,7 @@ export interface IAlertmanager {
             /**
              * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
           };
         };
         /**
@@ -6667,7 +6667,7 @@ export interface IAlertmanager {
             /**
              * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
             /**
              * Scheme to use for connecting to the host. Defaults to HTTP.
              */
@@ -6684,7 +6684,7 @@ export interface IAlertmanager {
             /**
              * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
              */
-            "port": any;
+            "port": number | string;
           };
         };
       };
@@ -6747,7 +6747,7 @@ export interface IAlertmanager {
           /**
            * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
           /**
            * Scheme to use for connecting to the host. Defaults to HTTP.
            */
@@ -6776,7 +6776,7 @@ export interface IAlertmanager {
           /**
            * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
         };
         /**
          * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -6875,7 +6875,7 @@ export interface IAlertmanager {
           /**
            * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
           /**
            * Scheme to use for connecting to the host. Defaults to HTTP.
            */
@@ -6904,7 +6904,7 @@ export interface IAlertmanager {
           /**
            * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
         };
         /**
          * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -6923,13 +6923,13 @@ export interface IAlertmanager {
          * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
          */
         "limits"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
         /**
          * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
          */
         "requests"?: {
-          [key: string]: any;
+          [key: string]: number | string;
         };
       };
       /**
@@ -7093,7 +7093,7 @@ export interface IAlertmanager {
           /**
            * Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
           /**
            * Scheme to use for connecting to the host. Defaults to HTTP.
            */
@@ -7122,7 +7122,7 @@ export interface IAlertmanager {
           /**
            * Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
            */
-          "port": any;
+          "port": number | string;
         };
         /**
          * Optional duration in seconds the pod needs to terminate gracefully upon probe failure. The grace period is the duration in seconds after the processes running in the pod are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. If this value is nil, the pod's terminationGracePeriodSeconds will be used. Otherwise, this value overrides the value provided by the pod spec. Value must be non-negative integer. The value zero indicates stop immediately via the kill signal (no opportunity to shut down). This is a beta field and requires enabling ProbeTerminationGracePeriod feature gate. Minimum value is 1. spec.terminationGracePeriodSeconds is used if unset.
@@ -7267,13 +7267,13 @@ export interface IAlertmanager {
        * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
        */
       "limits"?: {
-        [key: string]: any;
+        [key: string]: number | string;
       };
       /**
        * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
        */
       "requests"?: {
-        [key: string]: any;
+        [key: string]: number | string;
       };
     };
     /**
@@ -7415,7 +7415,7 @@ export interface IAlertmanager {
         /**
          * Total amount of local storage required for this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. The default is nil which means that the limit is undefined. More info: http://kubernetes.io/docs/user-guide/volumes#emptydir
          */
-        "sizeLimit"?: any;
+        "sizeLimit"?: number | string;
       };
       /**
        * EphemeralVolumeSource to be used by the Prometheus StatefulSets. This is a beta field in k8s 1.21, for lower versions, starting with k8s 1.19, it requires enabling the GenericEphemeralVolume feature gate. More info: https://kubernetes.io/docs/concepts/storage/ephemeral-volumes/#generic-ephemeral-volumes
@@ -7483,13 +7483,13 @@ export interface IAlertmanager {
                * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "limits"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
               /**
                * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "requests"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
             };
             /**
@@ -7618,13 +7618,13 @@ export interface IAlertmanager {
              * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "limits"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
             /**
              * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
              */
             "requests"?: {
-              [key: string]: any;
+              [key: string]: number | string;
             };
           };
           /**
@@ -7680,13 +7680,13 @@ export interface IAlertmanager {
            * The storage resource within AllocatedResources tracks the capacity allocated to a PVC. It may be larger than the actual capacity when a volume expansion operation is requested. For storage quota, the larger value from allocatedResources and PVC.spec.resources is used. If allocatedResources is not set, PVC.spec.resources alone is used for quota calculation. If a volume expansion capacity request is lowered, allocatedResources is only lowered if there are no expansion operations in progress and if the actual volume capacity is equal or lower than the requested capacity. This is an alpha field and requires enabling RecoverVolumeExpansionFailure feature.
            */
           "allocatedResources"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           /**
            * Represents the actual resources of the underlying volume.
            */
           "capacity"?: {
-            [key: string]: any;
+            [key: string]: number | string;
           };
           /**
            * Current Condition of persistent volume claim. If underlying persistent volume is being resized then the Condition will be set to 'ResizeStarted'.
@@ -8073,7 +8073,7 @@ export interface IAlertmanager {
             /**
              * Specifies the output format of the exposed resources, defaults to "1"
              */
-            "divisor"?: any;
+            "divisor"?: number | string;
             /**
              * Required: resource to select
              */
@@ -8092,7 +8092,7 @@ export interface IAlertmanager {
         /**
          * Total amount of local storage required for this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. The default is nil which means that the limit is undefined. More info: http://kubernetes.io/docs/user-guide/volumes#emptydir
          */
-        "sizeLimit"?: any;
+        "sizeLimit"?: number | string;
       };
       /**
        * Ephemeral represents a volume that is handled by a cluster storage driver. The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed. 
@@ -8164,13 +8164,13 @@ export interface IAlertmanager {
                * Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "limits"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
               /**
                * Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
                */
               "requests"?: {
-                [key: string]: any;
+                [key: string]: number | string;
               };
             };
             /**
@@ -8554,7 +8554,7 @@ export interface IAlertmanager {
                 /**
                  * Specifies the output format of the exposed resources, defaults to "1"
                  */
-                "divisor"?: any;
+                "divisor"?: number | string;
                 /**
                  * Required: resource to select
                  */

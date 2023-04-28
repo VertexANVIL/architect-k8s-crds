@@ -1955,7 +1955,230 @@ export interface IDestinationRule {
         /**
          * Settings controlling the load balancer algorithms.
          */
-        "loadBalancer"?: any | any | any;
+        "loadBalancer"?: Exclude<{
+          "consistentHash"?: {
+            /**
+             * Hash based on HTTP cookie.
+             */
+            "httpCookie"?: {
+              /**
+               * Name of the cookie.
+               */
+              "name"?: string;
+              /**
+               * Path to set for the cookie.
+               */
+              "path"?: string;
+              /**
+               * Lifetime of the cookie.
+               */
+              "ttl"?: string;
+            };
+            /**
+             * Hash based on a specific HTTP header.
+             */
+            "httpHeaderName"?: string;
+            /**
+             * Hash based on a specific HTTP query parameter.
+             */
+            "httpQueryParameterName"?: string;
+            "minimumRingSize"?: number;
+            /**
+             * Hash based on the source IP address.
+             */
+            "useSourceIp"?: boolean;
+          };
+          "localityLbSetting"?: {
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "distribute"?: Array<{
+              /**
+               * Originating locality, '/' separated, e.g.
+               */
+              "from"?: string;
+              /**
+               * Map of upstream localities to traffic distribution weights.
+               */
+              "to"?: {
+                [key: string]: number;
+              };
+            }>;
+            /**
+             * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+             */
+            "enabled"?: boolean;
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "failover"?: Array<{
+              /**
+               * Originating region.
+               */
+              "from"?: string;
+              "to"?: string;
+            }>;
+            /**
+             * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+             */
+            "failoverPriority"?: Array<string>;
+          };
+          "simple"?: "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+          /**
+           * Represents the warmup duration of Service.
+           */
+          "warmupDurationSecs"?: string;
+        }, {
+          "consistentHash"?: {
+            /**
+             * Hash based on HTTP cookie.
+             */
+            "httpCookie"?: {
+              /**
+               * Name of the cookie.
+               */
+              "name"?: string;
+              /**
+               * Path to set for the cookie.
+               */
+              "path"?: string;
+              /**
+               * Lifetime of the cookie.
+               */
+              "ttl"?: string;
+            };
+            /**
+             * Hash based on a specific HTTP header.
+             */
+            "httpHeaderName"?: string;
+            /**
+             * Hash based on a specific HTTP query parameter.
+             */
+            "httpQueryParameterName"?: string;
+            "minimumRingSize"?: number;
+            /**
+             * Hash based on the source IP address.
+             */
+            "useSourceIp"?: boolean;
+          };
+          "localityLbSetting"?: {
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "distribute"?: Array<{
+              /**
+               * Originating locality, '/' separated, e.g.
+               */
+              "from"?: string;
+              /**
+               * Map of upstream localities to traffic distribution weights.
+               */
+              "to"?: {
+                [key: string]: number;
+              };
+            }>;
+            /**
+             * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+             */
+            "enabled"?: boolean;
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "failover"?: Array<{
+              /**
+               * Originating region.
+               */
+              "from"?: string;
+              "to"?: string;
+            }>;
+            /**
+             * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+             */
+            "failoverPriority"?: Array<string>;
+          };
+          "simple": "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+          /**
+           * Represents the warmup duration of Service.
+           */
+          "warmupDurationSecs"?: string;
+        } | {
+          "consistentHash": Exclude<any, any | any | any | any> | any | any | any | any;
+        }> | {
+          "consistentHash"?: {
+            /**
+             * Hash based on HTTP cookie.
+             */
+            "httpCookie"?: {
+              /**
+               * Name of the cookie.
+               */
+              "name"?: string;
+              /**
+               * Path to set for the cookie.
+               */
+              "path"?: string;
+              /**
+               * Lifetime of the cookie.
+               */
+              "ttl"?: string;
+            };
+            /**
+             * Hash based on a specific HTTP header.
+             */
+            "httpHeaderName"?: string;
+            /**
+             * Hash based on a specific HTTP query parameter.
+             */
+            "httpQueryParameterName"?: string;
+            "minimumRingSize"?: number;
+            /**
+             * Hash based on the source IP address.
+             */
+            "useSourceIp"?: boolean;
+          };
+          "localityLbSetting"?: {
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "distribute"?: Array<{
+              /**
+               * Originating locality, '/' separated, e.g.
+               */
+              "from"?: string;
+              /**
+               * Map of upstream localities to traffic distribution weights.
+               */
+              "to"?: {
+                [key: string]: number;
+              };
+            }>;
+            /**
+             * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+             */
+            "enabled"?: boolean;
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "failover"?: Array<{
+              /**
+               * Originating region.
+               */
+              "from"?: string;
+              "to"?: string;
+            }>;
+            /**
+             * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+             */
+            "failoverPriority"?: Array<string>;
+          };
+          "simple": "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+          /**
+           * Represents the warmup duration of Service.
+           */
+          "warmupDurationSecs"?: string;
+        } | {
+          "consistentHash": Exclude<any, any | any | any | any> | any | any | any | any;
+        };
         "outlierDetection"?: {
           /**
            * Minimum ejection duration.
@@ -2045,7 +2268,230 @@ export interface IDestinationRule {
           /**
            * Settings controlling the load balancer algorithms.
            */
-          "loadBalancer"?: any | any | any;
+          "loadBalancer"?: Exclude<{
+            "consistentHash"?: {
+              /**
+               * Hash based on HTTP cookie.
+               */
+              "httpCookie"?: {
+                /**
+                 * Name of the cookie.
+                 */
+                "name"?: string;
+                /**
+                 * Path to set for the cookie.
+                 */
+                "path"?: string;
+                /**
+                 * Lifetime of the cookie.
+                 */
+                "ttl"?: string;
+              };
+              /**
+               * Hash based on a specific HTTP header.
+               */
+              "httpHeaderName"?: string;
+              /**
+               * Hash based on a specific HTTP query parameter.
+               */
+              "httpQueryParameterName"?: string;
+              "minimumRingSize"?: number;
+              /**
+               * Hash based on the source IP address.
+               */
+              "useSourceIp"?: boolean;
+            };
+            "localityLbSetting"?: {
+              /**
+               * Optional: only one of distribute, failover or failoverPriority can be set.
+               */
+              "distribute"?: Array<{
+                /**
+                 * Originating locality, '/' separated, e.g.
+                 */
+                "from"?: string;
+                /**
+                 * Map of upstream localities to traffic distribution weights.
+                 */
+                "to"?: {
+                  [key: string]: number;
+                };
+              }>;
+              /**
+               * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+               */
+              "enabled"?: boolean;
+              /**
+               * Optional: only one of distribute, failover or failoverPriority can be set.
+               */
+              "failover"?: Array<{
+                /**
+                 * Originating region.
+                 */
+                "from"?: string;
+                "to"?: string;
+              }>;
+              /**
+               * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+               */
+              "failoverPriority"?: Array<string>;
+            };
+            "simple"?: "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+            /**
+             * Represents the warmup duration of Service.
+             */
+            "warmupDurationSecs"?: string;
+          }, {
+            "consistentHash"?: {
+              /**
+               * Hash based on HTTP cookie.
+               */
+              "httpCookie"?: {
+                /**
+                 * Name of the cookie.
+                 */
+                "name"?: string;
+                /**
+                 * Path to set for the cookie.
+                 */
+                "path"?: string;
+                /**
+                 * Lifetime of the cookie.
+                 */
+                "ttl"?: string;
+              };
+              /**
+               * Hash based on a specific HTTP header.
+               */
+              "httpHeaderName"?: string;
+              /**
+               * Hash based on a specific HTTP query parameter.
+               */
+              "httpQueryParameterName"?: string;
+              "minimumRingSize"?: number;
+              /**
+               * Hash based on the source IP address.
+               */
+              "useSourceIp"?: boolean;
+            };
+            "localityLbSetting"?: {
+              /**
+               * Optional: only one of distribute, failover or failoverPriority can be set.
+               */
+              "distribute"?: Array<{
+                /**
+                 * Originating locality, '/' separated, e.g.
+                 */
+                "from"?: string;
+                /**
+                 * Map of upstream localities to traffic distribution weights.
+                 */
+                "to"?: {
+                  [key: string]: number;
+                };
+              }>;
+              /**
+               * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+               */
+              "enabled"?: boolean;
+              /**
+               * Optional: only one of distribute, failover or failoverPriority can be set.
+               */
+              "failover"?: Array<{
+                /**
+                 * Originating region.
+                 */
+                "from"?: string;
+                "to"?: string;
+              }>;
+              /**
+               * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+               */
+              "failoverPriority"?: Array<string>;
+            };
+            "simple": "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+            /**
+             * Represents the warmup duration of Service.
+             */
+            "warmupDurationSecs"?: string;
+          } | {
+            "consistentHash": Exclude<any, any | any | any | any> | any | any | any | any;
+          }> | {
+            "consistentHash"?: {
+              /**
+               * Hash based on HTTP cookie.
+               */
+              "httpCookie"?: {
+                /**
+                 * Name of the cookie.
+                 */
+                "name"?: string;
+                /**
+                 * Path to set for the cookie.
+                 */
+                "path"?: string;
+                /**
+                 * Lifetime of the cookie.
+                 */
+                "ttl"?: string;
+              };
+              /**
+               * Hash based on a specific HTTP header.
+               */
+              "httpHeaderName"?: string;
+              /**
+               * Hash based on a specific HTTP query parameter.
+               */
+              "httpQueryParameterName"?: string;
+              "minimumRingSize"?: number;
+              /**
+               * Hash based on the source IP address.
+               */
+              "useSourceIp"?: boolean;
+            };
+            "localityLbSetting"?: {
+              /**
+               * Optional: only one of distribute, failover or failoverPriority can be set.
+               */
+              "distribute"?: Array<{
+                /**
+                 * Originating locality, '/' separated, e.g.
+                 */
+                "from"?: string;
+                /**
+                 * Map of upstream localities to traffic distribution weights.
+                 */
+                "to"?: {
+                  [key: string]: number;
+                };
+              }>;
+              /**
+               * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+               */
+              "enabled"?: boolean;
+              /**
+               * Optional: only one of distribute, failover or failoverPriority can be set.
+               */
+              "failover"?: Array<{
+                /**
+                 * Originating region.
+                 */
+                "from"?: string;
+                "to"?: string;
+              }>;
+              /**
+               * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+               */
+              "failoverPriority"?: Array<string>;
+            };
+            "simple": "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+            /**
+             * Represents the warmup duration of Service.
+             */
+            "warmupDurationSecs"?: string;
+          } | {
+            "consistentHash": Exclude<any, any | any | any | any> | any | any | any | any;
+          };
           "outlierDetection"?: {
             /**
              * Minimum ejection duration.
@@ -2196,7 +2642,230 @@ export interface IDestinationRule {
       /**
        * Settings controlling the load balancer algorithms.
        */
-      "loadBalancer"?: any | any | any;
+      "loadBalancer"?: Exclude<{
+        "consistentHash"?: {
+          /**
+           * Hash based on HTTP cookie.
+           */
+          "httpCookie"?: {
+            /**
+             * Name of the cookie.
+             */
+            "name"?: string;
+            /**
+             * Path to set for the cookie.
+             */
+            "path"?: string;
+            /**
+             * Lifetime of the cookie.
+             */
+            "ttl"?: string;
+          };
+          /**
+           * Hash based on a specific HTTP header.
+           */
+          "httpHeaderName"?: string;
+          /**
+           * Hash based on a specific HTTP query parameter.
+           */
+          "httpQueryParameterName"?: string;
+          "minimumRingSize"?: number;
+          /**
+           * Hash based on the source IP address.
+           */
+          "useSourceIp"?: boolean;
+        };
+        "localityLbSetting"?: {
+          /**
+           * Optional: only one of distribute, failover or failoverPriority can be set.
+           */
+          "distribute"?: Array<{
+            /**
+             * Originating locality, '/' separated, e.g.
+             */
+            "from"?: string;
+            /**
+             * Map of upstream localities to traffic distribution weights.
+             */
+            "to"?: {
+              [key: string]: number;
+            };
+          }>;
+          /**
+           * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+           */
+          "enabled"?: boolean;
+          /**
+           * Optional: only one of distribute, failover or failoverPriority can be set.
+           */
+          "failover"?: Array<{
+            /**
+             * Originating region.
+             */
+            "from"?: string;
+            "to"?: string;
+          }>;
+          /**
+           * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+           */
+          "failoverPriority"?: Array<string>;
+        };
+        "simple"?: "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+        /**
+         * Represents the warmup duration of Service.
+         */
+        "warmupDurationSecs"?: string;
+      }, {
+        "consistentHash"?: {
+          /**
+           * Hash based on HTTP cookie.
+           */
+          "httpCookie"?: {
+            /**
+             * Name of the cookie.
+             */
+            "name"?: string;
+            /**
+             * Path to set for the cookie.
+             */
+            "path"?: string;
+            /**
+             * Lifetime of the cookie.
+             */
+            "ttl"?: string;
+          };
+          /**
+           * Hash based on a specific HTTP header.
+           */
+          "httpHeaderName"?: string;
+          /**
+           * Hash based on a specific HTTP query parameter.
+           */
+          "httpQueryParameterName"?: string;
+          "minimumRingSize"?: number;
+          /**
+           * Hash based on the source IP address.
+           */
+          "useSourceIp"?: boolean;
+        };
+        "localityLbSetting"?: {
+          /**
+           * Optional: only one of distribute, failover or failoverPriority can be set.
+           */
+          "distribute"?: Array<{
+            /**
+             * Originating locality, '/' separated, e.g.
+             */
+            "from"?: string;
+            /**
+             * Map of upstream localities to traffic distribution weights.
+             */
+            "to"?: {
+              [key: string]: number;
+            };
+          }>;
+          /**
+           * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+           */
+          "enabled"?: boolean;
+          /**
+           * Optional: only one of distribute, failover or failoverPriority can be set.
+           */
+          "failover"?: Array<{
+            /**
+             * Originating region.
+             */
+            "from"?: string;
+            "to"?: string;
+          }>;
+          /**
+           * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+           */
+          "failoverPriority"?: Array<string>;
+        };
+        "simple": "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+        /**
+         * Represents the warmup duration of Service.
+         */
+        "warmupDurationSecs"?: string;
+      } | {
+        "consistentHash": Exclude<any, any | any | any | any> | any | any | any | any;
+      }> | {
+        "consistentHash"?: {
+          /**
+           * Hash based on HTTP cookie.
+           */
+          "httpCookie"?: {
+            /**
+             * Name of the cookie.
+             */
+            "name"?: string;
+            /**
+             * Path to set for the cookie.
+             */
+            "path"?: string;
+            /**
+             * Lifetime of the cookie.
+             */
+            "ttl"?: string;
+          };
+          /**
+           * Hash based on a specific HTTP header.
+           */
+          "httpHeaderName"?: string;
+          /**
+           * Hash based on a specific HTTP query parameter.
+           */
+          "httpQueryParameterName"?: string;
+          "minimumRingSize"?: number;
+          /**
+           * Hash based on the source IP address.
+           */
+          "useSourceIp"?: boolean;
+        };
+        "localityLbSetting"?: {
+          /**
+           * Optional: only one of distribute, failover or failoverPriority can be set.
+           */
+          "distribute"?: Array<{
+            /**
+             * Originating locality, '/' separated, e.g.
+             */
+            "from"?: string;
+            /**
+             * Map of upstream localities to traffic distribution weights.
+             */
+            "to"?: {
+              [key: string]: number;
+            };
+          }>;
+          /**
+           * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+           */
+          "enabled"?: boolean;
+          /**
+           * Optional: only one of distribute, failover or failoverPriority can be set.
+           */
+          "failover"?: Array<{
+            /**
+             * Originating region.
+             */
+            "from"?: string;
+            "to"?: string;
+          }>;
+          /**
+           * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+           */
+          "failoverPriority"?: Array<string>;
+        };
+        "simple": "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+        /**
+         * Represents the warmup duration of Service.
+         */
+        "warmupDurationSecs"?: string;
+      } | {
+        "consistentHash": Exclude<any, any | any | any | any> | any | any | any | any;
+      };
       "outlierDetection"?: {
         /**
          * Minimum ejection duration.
@@ -2286,7 +2955,230 @@ export interface IDestinationRule {
         /**
          * Settings controlling the load balancer algorithms.
          */
-        "loadBalancer"?: any | any | any;
+        "loadBalancer"?: Exclude<{
+          "consistentHash"?: {
+            /**
+             * Hash based on HTTP cookie.
+             */
+            "httpCookie"?: {
+              /**
+               * Name of the cookie.
+               */
+              "name"?: string;
+              /**
+               * Path to set for the cookie.
+               */
+              "path"?: string;
+              /**
+               * Lifetime of the cookie.
+               */
+              "ttl"?: string;
+            };
+            /**
+             * Hash based on a specific HTTP header.
+             */
+            "httpHeaderName"?: string;
+            /**
+             * Hash based on a specific HTTP query parameter.
+             */
+            "httpQueryParameterName"?: string;
+            "minimumRingSize"?: number;
+            /**
+             * Hash based on the source IP address.
+             */
+            "useSourceIp"?: boolean;
+          };
+          "localityLbSetting"?: {
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "distribute"?: Array<{
+              /**
+               * Originating locality, '/' separated, e.g.
+               */
+              "from"?: string;
+              /**
+               * Map of upstream localities to traffic distribution weights.
+               */
+              "to"?: {
+                [key: string]: number;
+              };
+            }>;
+            /**
+             * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+             */
+            "enabled"?: boolean;
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "failover"?: Array<{
+              /**
+               * Originating region.
+               */
+              "from"?: string;
+              "to"?: string;
+            }>;
+            /**
+             * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+             */
+            "failoverPriority"?: Array<string>;
+          };
+          "simple"?: "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+          /**
+           * Represents the warmup duration of Service.
+           */
+          "warmupDurationSecs"?: string;
+        }, {
+          "consistentHash"?: {
+            /**
+             * Hash based on HTTP cookie.
+             */
+            "httpCookie"?: {
+              /**
+               * Name of the cookie.
+               */
+              "name"?: string;
+              /**
+               * Path to set for the cookie.
+               */
+              "path"?: string;
+              /**
+               * Lifetime of the cookie.
+               */
+              "ttl"?: string;
+            };
+            /**
+             * Hash based on a specific HTTP header.
+             */
+            "httpHeaderName"?: string;
+            /**
+             * Hash based on a specific HTTP query parameter.
+             */
+            "httpQueryParameterName"?: string;
+            "minimumRingSize"?: number;
+            /**
+             * Hash based on the source IP address.
+             */
+            "useSourceIp"?: boolean;
+          };
+          "localityLbSetting"?: {
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "distribute"?: Array<{
+              /**
+               * Originating locality, '/' separated, e.g.
+               */
+              "from"?: string;
+              /**
+               * Map of upstream localities to traffic distribution weights.
+               */
+              "to"?: {
+                [key: string]: number;
+              };
+            }>;
+            /**
+             * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+             */
+            "enabled"?: boolean;
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "failover"?: Array<{
+              /**
+               * Originating region.
+               */
+              "from"?: string;
+              "to"?: string;
+            }>;
+            /**
+             * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+             */
+            "failoverPriority"?: Array<string>;
+          };
+          "simple": "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+          /**
+           * Represents the warmup duration of Service.
+           */
+          "warmupDurationSecs"?: string;
+        } | {
+          "consistentHash": Exclude<any, any | any | any | any> | any | any | any | any;
+        }> | {
+          "consistentHash"?: {
+            /**
+             * Hash based on HTTP cookie.
+             */
+            "httpCookie"?: {
+              /**
+               * Name of the cookie.
+               */
+              "name"?: string;
+              /**
+               * Path to set for the cookie.
+               */
+              "path"?: string;
+              /**
+               * Lifetime of the cookie.
+               */
+              "ttl"?: string;
+            };
+            /**
+             * Hash based on a specific HTTP header.
+             */
+            "httpHeaderName"?: string;
+            /**
+             * Hash based on a specific HTTP query parameter.
+             */
+            "httpQueryParameterName"?: string;
+            "minimumRingSize"?: number;
+            /**
+             * Hash based on the source IP address.
+             */
+            "useSourceIp"?: boolean;
+          };
+          "localityLbSetting"?: {
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "distribute"?: Array<{
+              /**
+               * Originating locality, '/' separated, e.g.
+               */
+              "from"?: string;
+              /**
+               * Map of upstream localities to traffic distribution weights.
+               */
+              "to"?: {
+                [key: string]: number;
+              };
+            }>;
+            /**
+             * enable locality load balancing, this is DestinationRule-level and will override mesh wide settings in entirety.
+             */
+            "enabled"?: boolean;
+            /**
+             * Optional: only one of distribute, failover or failoverPriority can be set.
+             */
+            "failover"?: Array<{
+              /**
+               * Originating region.
+               */
+              "from"?: string;
+              "to"?: string;
+            }>;
+            /**
+             * failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.
+             */
+            "failoverPriority"?: Array<string>;
+          };
+          "simple": "UNSPECIFIED" | "LEAST_CONN" | "RANDOM" | "PASSTHROUGH" | "ROUND_ROBIN" | "LEAST_REQUEST";
+          /**
+           * Represents the warmup duration of Service.
+           */
+          "warmupDurationSecs"?: string;
+        } | {
+          "consistentHash": Exclude<any, any | any | any | any> | any | any | any | any;
+        };
         "outlierDetection"?: {
           /**
            * Minimum ejection duration.
